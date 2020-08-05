@@ -1,14 +1,22 @@
 {
   "name": "nodejsglobalmentoring",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is node JS Mentoring Program",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "task1": "nodemon ./src/Task1/app.js",
+    "task2": "nodemon ./src/Task2/app.js"
   },
-  "author": "",
+  "author": "Cesar Ramirez",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
     "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "csvtojson": "^2.0.10"
   }
 }
