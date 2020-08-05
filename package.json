@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "task1": "nodemon ./src/Task1/app.js",
     "task2": "nodemon ./src/Task2/app.js",
-    "task1-babel" :"",
-    "task2-babel" :""
+    "task1-babel" :"nodemon ./src/Task3/appBabel1.js",
+    "task2-babel" :"nodemon ./src/Task3/appBabel2.js"
   },
   "author": "Cesar Ramirez",
   "license": "ISC",
