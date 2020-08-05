@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "task1": "nodemon ./src/Task1/app.js",
-    "task2": "nodemon ./src/Task2/app.js"
+    "task2": "nodemon ./src/Task2/app.js",
+    "task1-babel" :"",
+    "task2-babel" :""
   },
   "author": "Cesar Ramirez",
   "license": "ISC",
