@@ -2,15 +2,11 @@
 
 This repo holds all the homework task for the EPAM Node JS Mentor Program 2020
 
-## Initial Instalation Steps
+## Install NodeJs
 
-We need to to install NodeJS:
-
-- [Node.js](https://nodejs.org/en/)
+[Node.js](https://nodejs.org/en/)
 
 ---
-
-Follow next instructions to be able to clone this project and run it locally.
 
 ### Clone the repository
 
@@ -30,15 +26,12 @@ cd NodeJsGlobalMentoring
 
 ### Install NPM libraries:
 
-With `npm`:
-
 ```bash
 npm install
 ```
 
-### Command Line runners:
+### CLI Scripts:
 
-With `npm`:
 ```bash
 npm run task1
 npm run task2
