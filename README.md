@@ -1,12 +1,14 @@
-# NodeJS Global Mentoring Program 2
+# NodeJS Global Mentoring Program 
 
-## Initial Steps
+
+This repo is to submit all the task
+
+## Initial Instalation Steps
 
 We need to to install NodeJS:
 
 - [Node.js](https://nodejs.org/en/)
 
----
 ---
 
 ## Getting Started
@@ -45,4 +47,4 @@ npm run task1
 npm run task2
 ```
 
-Made with by Cesar Ramirez
+Made with ❤ by Cesar Ramirez
