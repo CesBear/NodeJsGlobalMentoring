@@ -1,6 +1,5 @@
 const csv = require("csvtojson");
 const fs = require("fs");
-
 const writterStream = fs.createWriteStream("./data/outputFiles/output.txt");
 const readStream = fs.createReadStream("./data/csv/nodejs-hw1-ex1.csv")
 
