@@ -1,7 +1,5 @@
 const process = require("process");
-const { stdin, stdout } = process;
 
-stdin.addListener("data", (input) => {
-  const reversedInput = input.reverse().toString().trim();
-  stdout.write(`${reversedInput} \n`);
+process.stdin.addListener('data', function (inputValue) {  
+  return process.stdout.write(inputValue.reverse().toString().trim() + '\n')
 });
