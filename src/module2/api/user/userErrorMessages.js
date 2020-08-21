@@ -12,6 +12,9 @@ module.exports = {
     },
     userLoggedIn: () => {
         return 'That login is already in use'
+    },
+    userNotDeleted: () => {
+        return 'That login is already in use'
     }
 
 };

@@ -1,61 +1,44 @@
 import UserSchema from './userModel';
 
-let users = [];
+let userList = [];
 
 module.exports = {
     
-
     create({ age, login, password }) {
-        const previousUsersLength = users.length;
-        users = [...users, new UserSchema(age,login, password)];
+        let lastUserState = userList.length;
+        userList = [...userList, new UserSchema(age,login,password)];
 
-        if (users.length === previousUsersLength) return null;
-
-        return users[users.length - 1];
+        return (userList.length === lastUserState) ? null : userList[userList.length - 1];
     },
     update(userId, { age, login, password  }) {
-        const userIndex = users.findIndex(user => {
-            if (user.id === userId && !user.isDeleted) return user;
-            return null;
+        let index = userList.findIndex(user => {
+            return (user.id === userId && !user.isDeleted) ? user : null;
         });
 
-        if (userIndex < 0) return null;
-
-        return users[userIndex] = { ...users[userIndex], age, login, password };
+        return (index < 0) ? null : userList[index] = { ...userList[index], age, login, password };
     },
     delete(userId) {
-        const userIndex = users.findIndex(user => {
-            if (user.id === userId && !user.isDeleted) return user;
-            return null;
+        let index = userList.findIndex(user => {
+            return (user.id === userId && !user.isDeleted) ? user : null;
         });
-
-        if (userIndex < 0) return null;
-        users[userIndex] = { ...users[userIndex], isDeleted: true };
-
-        return 'User was successfully deleted';
-    },
+        return (index < 0) ? null: userList[index] = { ...userList[index], isDeleted: true };;
+     },
     findUserById(userId) {
-        const userIndex = users.findIndex(user => {
-            if (user.id === userId && !user.isDeleted) return user;
-            return null;
+        let index = userList.findIndex(user => {
+            return (user.id === userId && !user.isDeleted) ? user : null;
         });
 
-        if (userIndex < 0) return null;
-
-        return users[userIndex];
+        return  (index < 0) ? null : userList[index];
     },    
     findUserByLogin(login) {
-        const userIndex = users.findIndex(user => {
-            if (user.login === login && !user.isDeleted) return user;
-            return null;
+        let index = userList.findIndex(user => {
+            return (user.login === login && !user.isDeleted) ? user : null;
         });
 
-        if (userIndex < 0) return null;
-
-        return users[userIndex];
+        return (index < 0) ? null :  userList[index];
     },
-    getAutoSuggestUsers(loginSubstring = '', limit = users.length) {
-        return users.filter(user => !user.isDeleted && user.login.includes(loginSubstring))
+    getAutoSuggestUsers(loginSubstring = '', limit = userList.length) {
+        return userList.filter(user => user.login.includes(loginSubstring) &&! user.isDeleted)
                     .slice(0, limit)
                     .sort((a, b) => a.login.localeCompare(b.login));
     }
