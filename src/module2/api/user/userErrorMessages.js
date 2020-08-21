@@ -14,7 +14,7 @@ module.exports = {
         return 'That login is already in use'
     },
     userNotDeleted: () => {
-        return 'That login is already in use'
+        return 'Error: user was not able to be deleted'
     }
 
 };
