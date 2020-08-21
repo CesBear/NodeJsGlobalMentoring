@@ -1,14 +1,16 @@
 {
-  "name": "nodejsglobalmentoring",
+  "name": "nodejs-gmp-mexico",
   "version": "1.0.0",
   "description": "This is node JS Mentoring Program",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "task1": "nodemon ./src/Task1/app.js",
-    "task2": "nodemon ./src/Task2/app.js",
-    "task1-babel": "nodemon --exec babel-node --plugins @babel/plugin-transform-arrow-functions --ignore  'data/csv/*.*'  src/Task3/appBabelTask1.js",
-    "task2-babel": "nodemon --exec babel-node --plugins @babel/plugin-transform-arrow-functions --ignore  'data/csv/*.*'  src/Task3/appBabelTask2.js"
+    "task1": "nodemon ./src/module1/Task1/app.js",
+    "task2": "nodemon ./src/module1/Task2/app.js",
+    "task1-babel": "nodemon --exec babel-node --plugins @babel/plugin-transform-arrow-functions --ignore  'data/csv/*.*'  src/module1/Task3/appBabelTask1.js",
+    "task2-babel": "nodemon --exec babel-node --plugins @babel/plugin-transform-arrow-functions --ignore  'data/csv/*.*'  src/module1/Task3/appBabelTask2.js",
+    "task:crud": "nodemon --exec babel-node ./src/module2/app.js",
+    "lint": "eslint . --ext .js"
   },
   "author": "Cesar Ramirez",
   "license": "ISC",
@@ -17,9 +19,19 @@
     "@babel/node": "^7.10.5",
     "@babel/plugin-transform-arrow-functions": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
+    "babel-eslint": "^8.2.6",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "nodemon": "^2.0.4"
   },
   "dependencies": {
-    "csvtojson": "^2.0.10"
+    "csvtojson": "^2.0.10",
+    "@hapi/joi": "^17.1.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-joi-validation": "^4.0.4-beta.0",
+    "uuid": "^8.3.0"
   }
 }
